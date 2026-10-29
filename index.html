@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quintus Minutes — Privacy Policy &amp; Legal Notice</title>
+<meta name="description" content="Quintus Minutes — the fully on-device lecture and meeting recorder. Privacy policy, legal notice and contact.">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --text: #2b2622;
+    --muted: #6f665e;
+    --accent: #e85d2a;
+    --hairline: #e8e1d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+  }
+  header {
+    padding: 28px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+    background: var(--card);
+  }
+  header h1 { margin: 0; font-size: 1.5rem; letter-spacing: .2px; }
+  header p  { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+  nav { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  nav a {
+    text-decoration: none; color: var(--accent);
+    border: 1.5px solid var(--accent); border-radius: 999px;
+    padding: 6px 16px; font-size: .9rem; font-weight: 600;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 28px 20px 60px; }
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 1.25rem; margin: 34px 0 12px;
+    padding-top: 18px; border-top: 1px solid var(--hairline);
+  }
+  section:first-of-type h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+  h3 { font-size: 1.02rem; margin: 24px 0 8px; }
+  p, li { font-size: .97rem; }
+  ul { padding-left: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; margin: 12px 0; }
+  th, td { border: 1px solid var(--hairline); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--card); }
+  .card {
+    background: var(--card); border: 1px solid var(--hairline);
+    border-radius: 14px; padding: 18px 20px; margin: 14px 0;
+  }
+  .todo {
+    background: #fff4ec; border: 1px dashed var(--accent);
+    border-radius: 10px; padding: 10px 14px; font-size: .9rem; color: #9a4318;
+  }
+  footer {
+    border-top: 1px solid var(--hairline); padding: 18px 20px;
+    text-align: center; color: var(--muted); font-size: .85rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Quintus Minutes</h1>
+  <p>The fully on-device lecture &amp; meeting recorder — no cloud, no accounts, no tracking.</p>
+  <nav>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#impressum" lang="de">Impressum</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ═══════════════════════ PRIVACY POLICY ═══════════════════════ -->
+<section id="privacy">
+  <h2>Privacy Policy</h2>
+  <p><strong>Last updated:</strong> October 29, 2026</p>
+
+  <h3>Introduction</h3>
+  <p>Quintus Minutes (&ldquo;the App&rdquo;) is a <strong>fully on-device</strong> lecture, meeting
+  and personal private recorder. It records audio, produces live transcripts and summaries, and
+  keeps everything in your own hands.</p>
+  <div class="card">
+    <strong>Key points</strong>
+    <ul>
+      <li>All data — recordings, transcripts, summaries, settings — is stored <strong>only on
+          your device</strong>, in the app&rsquo;s private storage.</li>
+      <li>No data is ever sent to external servers by the App itself.</li>
+      <li>No accounts, no sign-up, no third-party analytics, no tracking, no advertising,
+          no telemetry.</li>
+      <li>Transcription, summarization and speaker labeling all run <strong>locally on your
+          device</strong> using embedded AI models.</li>
+    </ul>
+  </div>
+
+  <h3>1. Information We Collect</h3>
+
+  <h4>1.1 The App itself collects nothing</h4>
+  <p>Quintus Minutes transmits none of your data anywhere. Specifically:</p>
+  <ul>
+    <li><strong>Audio recordings</strong> — stored only in the app&rsquo;s private storage on your
+        device. Never uploaded.</li>
+    <li><strong>Transcripts and summaries</strong> — generated on-device by the embedded AI models.
+        Never uploaded.</li>
+    <li><strong>Usage data</strong> — none. The App contains no analytics SDKs, no crash reporting
+        service, and no advertising components.</li>
+    <li><strong>Contacts, location, photos, files</strong> — the App does not request or use these
+        permissions at all.</li>
+  </ul>
+
+  <h4>1.2 Voice embeddings (speaker labeling)</h4>
+  <p>The App includes a <strong>built-in speaker-labeling feature</strong>. After a recording session
+  ends, it automatically works out which parts of the audio belong to which speaker, so transcripts
+  can carry speaker names (e.g. &ldquo;Speaker 1&rdquo;). This computation is part of the recording
+  pipeline and runs locally for every session; the corresponding model files are already built into
+  the App itself.</p>
+  <p>For this labeling, short <strong>voice embeddings</strong> — numeric fingerprints used only to
+  group speech segments by speaker — are computed <strong>on your device</strong>:</p>
+  <ul>
+    <li>Embeddings are held <strong>only in memory</strong> while the current session&rsquo;s speaker
+        labels are being computed.</li>
+    <li>They are <strong>never persisted, never written to disk, and never transmitted</strong>.</li>
+    <li>When labeling of the session completes — or the session is deleted — the embeddings are
+        discarded immediately. Only the resulting speaker labels are stored with the transcript,
+        locally on your device.</li>
+  </ul>
+  <p>The labeling computation itself is part of the recording pipeline and cannot be switched off;
+  however, you can <strong>hide</strong> speaker names at any time using the &ldquo;Show speakers /
+  Hide speakers&rdquo; control in the session detail — hiding also causes the session&rsquo;s
+  summaries to be rebuilt without speaker references, all locally.</p>
+
+  <h4>1.3 Microphone</h4>
+  <p>The microphone is used <strong>only while a recording session is active</strong> (or
+  paused-but-open, as indicated by the recording indicator on screen). Recording stops entirely when
+  you stop the session.</p>
+
+  <h3>2. Third-Party Downloads (model files)</h3>
+  <p>On first setup, the App downloads <strong>static, openly published AI model files</strong> so
+  that transcription and summarization can run fully offline afterward:</p>
+  <ul>
+    <li><strong>Hugging Face</strong> — the transcription models (Whisper) and, optionally, the
+        summarization model (official Gemma model)</li>
+    <li><strong>GitHub Releases</strong> — the voice-activity-detection model and additional
+        transcription model files</li>
+  </ul>
+  <p>The speaker-labeling models are <strong>already built into the App itself</strong> and require
+  no download.</p>
+  <p>During these one-time downloads, the hosting server sees standard network information that any
+  download involves (your IP address, download request). <strong>No content of your recordings or
+  sessions is ever part of these requests.</strong> Every downloaded file is verified by SHA-256
+  checksum before use. After setup, the App works <strong>completely offline</strong> — you can turn
+  on Airplane Mode right after setup and everything keeps running.</p>
+
+  <h3>3. What Is Stored on Your Device</h3>
+  <table>
+    <tr><th>Content</th><th>Where</th><th>Removable how</th></tr>
+    <tr><td>Audio recordings</td><td>App-private storage</td><td>Delete session in App, or uninstall</td></tr>
+    <tr><td>Transcripts &amp; summaries</td><td>App-private database</td><td>Delete session in App, or uninstall</td></tr>
+    <tr><td>Settings (language, theme, etc.)</td><td>App-private storage</td><td>Uninstall</td></tr>
+    <tr><td>AI models (bundled or downloaded once)</td><td>App-private storage</td><td>Delete via Settings &rarr; model groups, or uninstall</td></tr>
+  </table>
+  <p>Exported files (TXT, Markdown, SRT, session ZIP) live wherever <strong>you</strong> chose to
+  share/save them; from that moment they are outside the App&rsquo;s scope, exactly like any file
+  you export yourself.</p>
+  <p><strong>Uninstalling the App removes all of the above permanently.</strong> The App has no
+  hidden backups and no sync.</p>
+
+  <h3>4. AI-Generated Content</h3>
+  <p>Transcripts and summaries in this App are <strong>generated automatically by on-device AI
+  models</strong>. Like all AI output, they can contain mistakes — misheard words, omitted
+  statements, or wrong speaker attributions.</p>
+  <ul>
+    <li>Always verify critical content (medical, legal, financial, contractual) against the original
+        recording. The App does not replace professional advice.</li>
+    <li>To report inaccurate, offensive, or otherwise problematic generated content, contact us
+        (Section 8). Sending the report remains under your control — the App does not transmit your
+        recordings or content any further on its own.</li>
+  </ul>
+
+  <h3>5. Children</h3>
+  <p>The App is a general-purpose utility, is not directed at children, and contains no ads, no
+  social features, and no data collection of any kind — including from children.</p>
+
+  <h3>6. Legal Basis</h3>
+  <p>We process <strong>no personal data on any server</strong>, so there is no server-side
+  processing for which a separate legal basis would be required. All data processing described above
+  happens solely on your device, under your control (access to own-device data is not in scope of
+  Regulation (EU) 2016/679 (&ldquo;GDPR&rdquo;)). Third-party model downloads (Section 2) are
+  strictly necessary for the App&rsquo;s core function.</p>
+
+  <h3>7. Changes to This Policy</h3>
+  <p>Updates to this policy will be published at the same location and referenced in the store
+  listing. Material changes will be accompanied by a new &ldquo;last updated&rdquo; date.</p>
+
+  <h3>8. Contact</h3>
+  <p>Questions, removal requests, or bug reports about anything you believe touches your data:</p>
+  <p><strong>jfalias [at] hotmail . de</strong><br>
+  <em>(written with &ldquo;[at]&rdquo; deliberately to reduce automated harvesting; to reach us,
+  replace &ldquo;[at]&rdquo; with &ldquo;@&rdquo; and remove the spaces.)</em></p>
+</section>
+
+<!-- ═══════════════════════ IMPRESSUM ═══════════════════════ -->
+<section id="impressum" lang="de">
+  <h2>Impressum</h2>
+
+  <p><strong>Anbieter / Diensteanbieter:</strong></p>
+  <p>
+    Jan Fiebrandt<br>
+    c/o MDC#2059<br>
+    Welserstraße 3<br>
+    87463 Dietmannsried<br>
+    Deutschland
+  </p>
+
+  <p><strong>Kontakt:</strong><br>
+  E-Mail: <a href="mailto:jfalias[at]hotmail.de">jfalias@hotmail.de</a></p>
+
+  <!-- Bei Nutzung der Kleinunternehmerregelung (§ 19 UStG) die nächste Zeile aktivieren:
+  <p><strong>Umsatzsteuer:</strong> Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+  -->
+
+  <p><strong>Verantwortlich für den Inhalt dieser Seite</strong> (§ 18 Abs. 2 MStV):<br>
+  Jan Fiebrandt, Anschrift wie oben.</p>
+
+  <p>Quintus Minutes ist eine eigenständig entwickelte Anwendung. Die genutzten KI-Modelle
+  (u.&nbsp;a. Gemma, Whisper) stehen unter offenen Lizenzen; Hinweise dazu in der App unter
+  &bdquo;Über&ldquo; &rarr; Lizenzen.</p>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Jan Fiebrandt · Quintus Minutes — records, transcribes and summarizes fully on your device.
+</footer>
+
+</body>
+</html>
